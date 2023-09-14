@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.toConnectedWallet = void 0;
-const wallet_types_1 = require("@terra-money/wallet-types");
+const wallet_types_1 = require("@nestwallet/wallet-types");
 const operators_1 = require("rxjs/operators");
 function toConnectedWallet(controller) {
     return (0, operators_1.map)((states) => {

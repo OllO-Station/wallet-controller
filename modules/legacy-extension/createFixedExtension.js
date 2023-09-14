@@ -1,4 +1,4 @@
-import { WebExtensionCreateTxFailed, WebExtensionTxFailed, WebExtensionTxUnspecifiedError, WebExtensionUserDenied, } from '@terra-money/web-extension-interface';
+import { WebExtensionCreateTxFailed, WebExtensionTxFailed, WebExtensionTxUnspecifiedError, WebExtensionUserDenied, } from '@nestwallet/web-extension-interface';
 import { Extension } from '@terra-money/feather.js';
 function getErrorMessage(error) {
     try {

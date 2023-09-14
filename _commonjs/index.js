@@ -14,7 +14,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("@terra-money/wallet-types"), exports);
+__exportStar(require("@nestwallet/wallet-types"), exports);
 __exportStar(require("./getChainOptions"), exports);
 __exportStar(require("./controller"), exports);
 __exportStar(require("./verifyBytes"), exports);

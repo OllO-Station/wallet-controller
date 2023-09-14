@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.mapExtensionSignBytesError = exports.mapExtensionTxError = void 0;
-const wallet_types_1 = require("@terra-money/wallet-types");
-const web_extension_interface_1 = require("@terra-money/web-extension-interface");
+const wallet_types_1 = require("@nestwallet/wallet-types");
+const web_extension_interface_1 = require("@nestwallet/web-extension-interface");
 const isError_1 = require("./isError");
 function mapExtensionTxError(tx, error) {
     if ((0, isError_1.isError)(error, wallet_types_1.UserDenied) ||

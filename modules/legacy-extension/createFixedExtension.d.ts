@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import { NetworkInfo } from '@terra-money/wallet-types';
+import { NetworkInfo } from '@nestwallet/wallet-types';
 import { ExtensionOptions, Tx, AccAddress } from '@terra-money/feather.js';
 type ConnectResponse = {
     addresses?: Record<string, AccAddress>;

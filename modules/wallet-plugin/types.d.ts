@@ -1,5 +1,5 @@
 import { CreateTxOptions } from '@terra-money/feather.js';
-import { NetworkInfo, TxResult } from '@terra-money/wallet-types';
+import { NetworkInfo, TxResult } from '@nestwallet/wallet-types';
 export interface WalletPlugin {
     name: string;
     type: string;

@@ -1,2 +1,2 @@
-import { Connection } from '@terra-money/wallet-types';
+import { Connection } from '@nestwallet/wallet-types';
 export declare function sortConnections(connections: Connection[]): Connection[];

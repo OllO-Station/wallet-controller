@@ -1,4 +1,4 @@
-import { CreateTxFailed, Timeout, TxFailed, TxUnspecifiedError, UserDenied, SignBytesUnspecifiedError } from '@terra-money/wallet-types';
+import { CreateTxFailed, Timeout, TxFailed, TxUnspecifiedError, UserDenied, SignBytesUnspecifiedError } from '@nestwallet/wallet-types';
 import { WalletConnectCreateTxFailed, WalletConnectTimeout, WalletConnectTxFailed, WalletConnectTxUnspecifiedError, WalletConnectUserDenied, WalletConnectSignBytesUnspecifiedError, } from '../modules/walletconnect';
 import { isError } from './isError';
 export function mapWalletConnectError(tx, error) {

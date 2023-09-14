@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ExtensionRouter = void 0;
-const web_extension_interface_1 = require("@terra-money/web-extension-interface");
+const web_extension_interface_1 = require("@nestwallet/web-extension-interface");
 const rxjs_1 = require("rxjs");
 const legacy_extension_1 = require("../legacy-extension");
 const modal_1 = require("./modal");

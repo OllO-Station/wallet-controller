@@ -1,6 +1,6 @@
 import { AccAddress, PublicKey, SimplePublicKey, Tx, } from '@terra-money/feather.js';
-import { ConnectType, WalletStatus, } from '@terra-money/wallet-types';
-import { WebExtensionTxStatus, } from '@terra-money/web-extension-interface';
+import { ConnectType, WalletStatus, } from '@nestwallet/wallet-types';
+import { WebExtensionTxStatus, } from '@nestwallet/web-extension-interface';
 import deepEqual from 'fast-deep-equal';
 import { BehaviorSubject, combineLatest, firstValueFrom, } from 'rxjs';
 import { filter, map } from 'rxjs/operators';

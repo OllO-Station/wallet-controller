@@ -1,5 +1,5 @@
-import { CreateTxFailed, SignBytesFailed, Timeout, TxFailed, TxUnspecifiedError, UserDenied, } from '@terra-money/wallet-types';
-import { WebExtensionCreateTxFailed, WebExtensionTxFailed, WebExtensionTxUnspecifiedError, WebExtensionUserDenied, } from '@terra-money/web-extension-interface';
+import { CreateTxFailed, SignBytesFailed, Timeout, TxFailed, TxUnspecifiedError, UserDenied, } from '@nestwallet/wallet-types';
+import { WebExtensionCreateTxFailed, WebExtensionTxFailed, WebExtensionTxUnspecifiedError, WebExtensionUserDenied, } from '@nestwallet/web-extension-interface';
 import { isError } from './isError';
 export function mapExtensionTxError(tx, error) {
     if (isError(error, UserDenied) ||

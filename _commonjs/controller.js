@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WalletController = void 0;
 const feather_js_1 = require("@terra-money/feather.js");
-const wallet_types_1 = require("@terra-money/wallet-types");
-const web_extension_interface_1 = require("@terra-money/web-extension-interface");
+const wallet_types_1 = require("@nestwallet/wallet-types");
+const web_extension_interface_1 = require("@nestwallet/web-extension-interface");
 const fast_deep_equal_1 = __importDefault(require("fast-deep-equal"));
 const rxjs_1 = require("rxjs");
 const operators_1 = require("rxjs/operators");

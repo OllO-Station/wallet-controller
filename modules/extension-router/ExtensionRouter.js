@@ -1,4 +1,4 @@
-import { WebExtensionStatus, } from '@terra-money/web-extension-interface';
+import { WebExtensionStatus, } from '@nestwallet/web-extension-interface';
 import { BehaviorSubject } from 'rxjs';
 import { LegacyExtensionConnector } from '../legacy-extension';
 import { selectModal } from './modal';

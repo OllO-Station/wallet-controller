@@ -1,4 +1,4 @@
-import { NetworkInfo } from '@terra-money/wallet-types';
+import { NetworkInfo } from '@nestwallet/wallet-types';
 import { ReadonlyWalletSession } from './types';
 interface Options {
     networks: NetworkInfo[];

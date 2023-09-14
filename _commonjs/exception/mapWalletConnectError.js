@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.mapWalletConnectSignBytesError = exports.mapWalletConnectError = void 0;
-const wallet_types_1 = require("@terra-money/wallet-types");
+const wallet_types_1 = require("@nestwallet/wallet-types");
 const walletconnect_1 = require("../modules/walletconnect");
 const isError_1 = require("./isError");
 function mapWalletConnectError(tx, error) {

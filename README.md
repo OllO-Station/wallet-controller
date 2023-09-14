@@ -1,6 +1,6 @@
 # Terra Wallet Controller
 
-This is a sub-structure of the [`@terra-money/wallet-provider`](https://www.npmjs.com/package/@terra-money/wallet-provider).
+This is a sub-structure of the [`@nestwallet/wallet-provider`](https://www.npmjs.com/package/@nestwallet/wallet-provider).
 
 You can use it when you want to develop in a framework other than React.
 

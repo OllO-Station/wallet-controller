@@ -1,4 +1,4 @@
-export * from '@terra-money/wallet-types';
+export * from '@nestwallet/wallet-types';
 export * from './getChainOptions';
 export * from './controller';
 export * from './verifyBytes';

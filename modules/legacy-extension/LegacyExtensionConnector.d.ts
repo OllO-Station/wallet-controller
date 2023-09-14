@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import { TerraWebExtensionConnector, TerraWebExtensionFeatures, WebExtensionPostPayload, WebExtensionSignBytesPayload, WebExtensionSignPayload, WebExtensionStates, WebExtensionTxResult } from '@terra-money/web-extension-interface';
+import { TerraWebExtensionConnector, TerraWebExtensionFeatures, WebExtensionPostPayload, WebExtensionSignBytesPayload, WebExtensionSignPayload, WebExtensionStates, WebExtensionTxResult } from '@nestwallet/web-extension-interface';
 import { AccAddress, CreateTxOptions } from '@terra-money/feather.js';
 import { Observer, Subscribable } from 'rxjs';
 export declare class LegacyExtensionConnector implements TerraWebExtensionConnector {

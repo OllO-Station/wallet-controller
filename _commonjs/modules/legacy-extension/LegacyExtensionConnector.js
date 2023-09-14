@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LegacyExtensionConnector = void 0;
-const web_extension_interface_1 = require("@terra-money/web-extension-interface");
+const web_extension_interface_1 = require("@nestwallet/web-extension-interface");
 const feather_js_1 = require("@terra-money/feather.js");
 const rxjs_1 = require("rxjs");
 const operators_1 = require("rxjs/operators");

@@ -1,4 +1,4 @@
-import { createLCDClient, } from '@terra-money/wallet-types';
+import { createLCDClient, } from '@nestwallet/wallet-types';
 import { map } from 'rxjs/operators';
 export function toLcdClient(lcdClientConfig) {
     return map((states) => {

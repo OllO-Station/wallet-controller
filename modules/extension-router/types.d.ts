@@ -1,4 +1,4 @@
-import { TerraWebExtensionFeatures, WebExtensionNetworkInfo, WebExtensionWalletInfo } from '@terra-money/web-extension-interface';
+import { TerraWebExtensionFeatures, WebExtensionNetworkInfo, WebExtensionWalletInfo } from '@nestwallet/web-extension-interface';
 import { ExtensionInfo } from './multiChannel';
 export declare enum ExtensionRouterConnectorType {
     LEGACY = "LEGACY",

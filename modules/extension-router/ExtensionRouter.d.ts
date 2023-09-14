@@ -1,6 +1,6 @@
 /// <reference types="node" />
-import { NetworkInfo } from '@terra-money/wallet-types';
-import { WebExtensionNetworkInfo, WebExtensionPostPayload, WebExtensionSignBytesPayload, WebExtensionSignPayload, WebExtensionTxResult } from '@terra-money/web-extension-interface';
+import { NetworkInfo } from '@nestwallet/wallet-types';
+import { WebExtensionNetworkInfo, WebExtensionPostPayload, WebExtensionSignBytesPayload, WebExtensionSignPayload, WebExtensionTxResult } from '@nestwallet/web-extension-interface';
 import { CreateTxOptions } from '@terra-money/feather.js';
 import { Subscribable } from 'rxjs';
 import { ExtensionInfo } from './multiChannel';

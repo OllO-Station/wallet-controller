@@ -1,4 +1,4 @@
-import { createConnectedWallet, WalletStatus, } from '@terra-money/wallet-types';
+import { createConnectedWallet, WalletStatus, } from '@nestwallet/wallet-types';
 import { map } from 'rxjs/operators';
 export function toConnectedWallet(controller) {
     return map((states) => {

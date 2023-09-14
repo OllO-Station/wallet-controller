@@ -1,7 +1,7 @@
 /// <reference types="node" />
 import { LCDClientConfig } from '@terra-money/feather.js';
 import { ExtensionOptions, LCDClient } from '@terra-money/feather.js';
-import { ConnectedWallet, Connection, ConnectType, Installation, NetworkInfo, SignBytesResult, SignResult, TxResult, WalletStates } from '@terra-money/wallet-types';
+import { ConnectedWallet, Connection, ConnectType, Installation, NetworkInfo, SignBytesResult, SignResult, TxResult, WalletStates } from '@nestwallet/wallet-types';
 import { Observable } from 'rxjs';
 import { ExtensionInfo } from './modules/extension-router/multiChannel';
 import { ReadonlyWalletSession } from './modules/readonly-wallet';

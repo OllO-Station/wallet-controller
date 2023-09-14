@@ -1,9 +1,14 @@
 {
-  "author": "Terraform Labs PTE.LTD",
+  "author": "OLLO Station",
   "license": "Apache-2.0",
-  "repository": "git://github:terra-money/wallet-provider",
-  "bugs": "https://github.com/terra-money/wallet-provider/issues",
-  "homepage": "https://github.com/terra-money/wallet-provider/tree/main/packages/src/@terra-money/wallet-controller",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OllO-Station/wallet-controller.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OllO-Station/wallet-controller/issues"
+  },
+  "homepage": "https://github.com/OllO-Station/wallet-controller",
   "engines": {
     "node": ">=16"
   },
@@ -12,12 +17,12 @@
     "access": "public"
   },
   "typings": "index.d.ts",
-  "name": "@terra-money/wallet-controller",
-  "version": "4.0.1",
+  "name": "@nestwallet/wallet-controller",
+  "version": "1.2.0",
   "dependencies": {
     "@terra-money/feather.js": "^1.0.0-beta.4",
-    "@terra-money/wallet-types": "^4.0.1",
-    "@terra-money/web-extension-interface": "^4.0.1",
+    "@nestwallet/wallet-types": "1.2.0",
+    "@nestwallet/web-extension-interface": "1.2.0",
     "fast-deep-equal": "^3.1.3",
     "rxjs": "^7.0.0",
     "jscrypto": "^1.0.0",
@@ -558,5 +563,10 @@
       "node": "./_commonjs/verifyBytes.js",
       "default": "./verifyBytes.js"
     }
+  },
+  "description": "This is a sub-structure of the [`@nestwallet/wallet-provider`](https://www.npmjs.com/package/@nestwallet/wallet-provider).",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

@@ -3,7 +3,7 @@ import { ExtensionOptions } from '@terra-money/feather.js';
 import { IPushServerOptions, IWalletConnectOptions } from '@walletconnect/types';
 import { Observable } from 'rxjs';
 import { WalletConnectSession, WalletConnectTxResult } from './types';
-import { WebExtensionSignBytesPayload } from '@terra-money/web-extension-interface';
+import { WebExtensionSignBytesPayload } from '@nestwallet/web-extension-interface';
 export interface WalletConnectControllerOptions {
     /**
      * Configuration parameter that `new WalletConnect(connectorOpts)`

@@ -1,4 +1,4 @@
-import { WebExtensionStatus, WebExtensionTxStatus, } from '@terra-money/web-extension-interface';
+import { WebExtensionStatus, WebExtensionTxStatus, } from '@nestwallet/web-extension-interface';
 import { AccAddress } from '@terra-money/feather.js';
 import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
