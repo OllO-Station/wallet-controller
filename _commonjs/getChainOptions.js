@@ -1,0 +1,36 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getChainOptions = void 0;
+const FALLBACK_MAINNET = {
+    'phoenix-1': {
+        chainID: 'phoenix-1',
+        lcd: 'https://phoenix-lcd.terra.dev',
+        gasAdjustment: 1.75,
+        gasPrices: { uluna: 0.015 },
+        prefix: 'terra',
+    },
+};
+const FALLBACK = {
+    defaultNetwork: FALLBACK_MAINNET,
+    // TODO: when wallet connect is ready
+    walletConnectChainIds: {},
+};
+let cache;
+async function getChainOptions() {
+    return fetch('https://assets.terra.dev/station/chains.json')
+        .then((res) => res.json())
+        .then((data) => {
+        const chainOptions = {
+            defaultNetwork: data.mainnet,
+            walletConnectChainIds: {},
+        };
+        cache = chainOptions;
+        return chainOptions;
+    })
+        .catch((error) => {
+        console.error('Failed to fetch chains.json', error);
+        return cache !== null && cache !== void 0 ? cache : FALLBACK;
+    });
+}
+exports.getChainOptions = getChainOptions;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2V0Q2hhaW5PcHRpb25zLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vc3JjL0B0ZXJyYS1tb25leS93YWxsZXQtY29udHJvbGxlci9nZXRDaGFpbk9wdGlvbnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBVUEsTUFBTSxnQkFBZ0IsR0FBRztJQUN2QixXQUFXLEVBQUU7UUFDWCxPQUFPLEVBQUUsV0FBVztRQUNwQixHQUFHLEVBQUUsK0JBQStCO1FBQ3BDLGFBQWEsRUFBRSxJQUFJO1FBQ25CLFNBQVMsRUFBRSxFQUFFLEtBQUssRUFBRSxLQUFLLEVBQUU7UUFDM0IsTUFBTSxFQUFFLE9BQU87S0FDaEI7Q0FDRixDQUFDO0FBRUYsTUFBTSxRQUFRLEdBQWlDO0lBQzdDLGNBQWMsRUFBRSxnQkFBZ0I7SUFDaEMscUNBQXFDO0lBQ3JDLHFCQUFxQixFQUFFLEVBQUU7Q0FDMUIsQ0FBQztBQUVGLElBQUksS0FBbUMsQ0FBQztBQUVqQyxLQUFLLFVBQVUsZUFBZTtJQUNuQyxPQUFPLEtBQUssQ0FBQyw4Q0FBOEMsQ0FBQztTQUN6RCxJQUFJLENBQUMsQ0FBQyxHQUFHLEVBQUUsRUFBRSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEVBQUUsQ0FBQztTQUN6QixJQUFJLENBQUMsQ0FBQyxJQUErQixFQUFFLEVBQUU7UUFDeEMsTUFBTSxZQUFZLEdBQWlDO1lBQ2pELGNBQWMsRUFBRSxJQUFJLENBQUMsT0FBTztZQUM1QixxQkFBcUIsRUFBRSxFQUFFO1NBQzFCLENBQUM7UUFDRixLQUFLLEdBQUcsWUFBWSxDQUFDO1FBQ3JCLE9BQU8sWUFBWSxDQUFDO0lBQ3RCLENBQUMsQ0FBQztTQUNELEtBQUssQ0FBQyxDQUFDLEtBQUssRUFBRSxFQUFFO1FBQ2YsT0FBTyxDQUFDLEtBQUssQ0FBQyw2QkFBNkIsRUFBRSxLQUFLLENBQUMsQ0FBQztRQUNwRCxPQUFPLEtBQUssYUFBTCxLQUFLLGNBQUwsS0FBSyxHQUFJLFFBQVEsQ0FBQztJQUMzQixDQUFDLENBQUMsQ0FBQztBQUNQLENBQUM7QUFmRCwwQ0FlQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5ldHdvcmtJbmZvIH0gZnJvbSAnQHRlcnJhLW1vbmV5L3dhbGxldC10eXBlcyc7XG5pbXBvcnQgeyBXYWxsZXRDb250cm9sbGVyT3B0aW9ucyB9IGZyb20gJy4vY29udHJvbGxlcic7XG5cbnR5cGUgQ2hhaW5JbmZvID0gTmV0d29ya0luZm9cblxuZXhwb3J0IHR5cGUgV2FsbGV0Q29udHJvbGxlckNoYWluT3B0aW9ucyA9IFBpY2s8XG4gIFdhbGxldENvbnRyb2xsZXJPcHRpb25zLFxuICAnZGVmYXVsdE5ldHdvcmsnIHwgJ3dhbGxldENvbm5lY3RDaGFpbklkcydcbj47XG5cbmNvbnN0IEZBTExCQUNLX01BSU5ORVQgPSB7XG4gICdwaG9lbml4LTEnOiB7XG4gICAgY2hhaW5JRDogJ3Bob2VuaXgtMScsXG4gICAgbGNkOiAnaHR0cHM6Ly9waG9lbml4LWxjZC50ZXJyYS5kZXYnLFxuICAgIGdhc0FkanVzdG1lbnQ6IDEuNzUsXG4gICAgZ2FzUHJpY2VzOiB7IHVsdW5hOiAwLjAxNSB9LFxuICAgIHByZWZpeDogJ3RlcnJhJyxcbiAgfSxcbn07XG5cbmNvbnN0IEZBTExCQUNLOiBXYWxsZXRDb250cm9sbGVyQ2hhaW5PcHRpb25zID0ge1xuICBkZWZhdWx0TmV0d29yazogRkFMTEJBQ0tfTUFJTk5FVCxcbiAgLy8gVE9ETzogd2hlbiB3YWxsZXQgY29ubmVjdCBpcyByZWFkeVxuICB3YWxsZXRDb25uZWN0Q2hhaW5JZHM6IHt9LFxufTtcblxubGV0IGNhY2hlOiBXYWxsZXRDb250cm9sbGVyQ2hhaW5PcHRpb25zO1xuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0Q2hhaW5PcHRpb25zKCk6IFByb21pc2U8V2FsbGV0Q29udHJvbGxlckNoYWluT3B0aW9ucz4ge1xuICByZXR1cm4gZmV0Y2goJ2h0dHBzOi8vYXNzZXRzLnRlcnJhLmRldi9zdGF0aW9uL2NoYWlucy5qc29uJylcbiAgICAudGhlbigocmVzKSA9PiByZXMuanNvbigpKVxuICAgIC50aGVuKChkYXRhOiBSZWNvcmQ8c3RyaW5nLCBDaGFpbkluZm8+KSA9PiB7XG4gICAgICBjb25zdCBjaGFpbk9wdGlvbnM6IFdhbGxldENvbnRyb2xsZXJDaGFpbk9wdGlvbnMgPSB7XG4gICAgICAgIGRlZmF1bHROZXR3b3JrOiBkYXRhLm1haW5uZXQsXG4gICAgICAgIHdhbGxldENvbm5lY3RDaGFpbklkczoge30sXG4gICAgICB9O1xuICAgICAgY2FjaGUgPSBjaGFpbk9wdGlvbnM7XG4gICAgICByZXR1cm4gY2hhaW5PcHRpb25zO1xuICAgIH0pXG4gICAgLmNhdGNoKChlcnJvcikgPT4ge1xuICAgICAgY29uc29sZS5lcnJvcignRmFpbGVkIHRvIGZldGNoIGNoYWlucy5qc29uJywgZXJyb3IpO1xuICAgICAgcmV0dXJuIGNhY2hlID8/IEZBTExCQUNLO1xuICAgIH0pO1xufVxuIl19
