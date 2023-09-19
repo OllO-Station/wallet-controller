@@ -1,4 +1,4 @@
-import { TerraWebExtensionConnector } from '@terra-money/web-extension-interface';
+import { TerraWebExtensionConnector } from '@nestwallet/web-extension-interface';
 export interface ExtensionInfo {
     name: string;
     identifier: string;
